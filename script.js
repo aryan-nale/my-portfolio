@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-}
+} 
 resizeCanvas();
 
 const letters = "01アイウエオカキクケコサシスセソ";
