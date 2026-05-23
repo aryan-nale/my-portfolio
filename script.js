@@ -77,15 +77,6 @@ const mainContent = document.querySelector(".main-content");
 
 // Lock scroll on start
 document.documentElement.classList.add("locked");
-
-// After 11s: hide loader, show button
-setTimeout(() => {
-    loader.style.opacity = "0";
-    loader.style.transition = "opacity 0.5s ease";
-    setTimeout(() => { loader.style.display = "none"; }, 500);
-    btn.style.display = "inline-block";
-}, 11000);
-
 // Enter button click
 btn.addEventListener("click", () => {
     box.classList.add("box-exit");
