@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryan Nale | Mechanical Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="image/png" href="/img/robo.png">
+<link rel="apple-touch-icon" href="/img/robo.png">
+</head>
+
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<canvas id="matrixCanvas"></canvas>
+
+<!-- SCAN LINE OVERLAY -->
+<div class="scanlines"></div>
+
+<!-- INTRO OVERLAY -->
+<div id="overlay">
+  <div class="box">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green-dot"></span>
+      <span class="terminal-title"><i class='bx bx-terminal'></i>terminal — aryan@portfolio</span>
+    </div>
+    <div class="terminal-body">
+      <h1 id="typingText"></h1>
+      <div class="cursor-blink">_</div>
+    </div>
+    <button id="enterBtn">▶ &nbsp;ENTER SYSTEM</button>
+  </div>
+</div>
+
+<!-- LOADING BAR -->
+<div id="loader">
+  <div class="loading-bar"></div>
+  <div class="loading-right">
+    <div class="spinner"></div>
+    <span>INITIALIZING...</span>
+  </div>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="mainContent">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2 class="logo">PORTFOLIO<span class="logo-dot">.</span></h2>
+    <div class="menu-toggle" id="menuToggle">
+    ☰
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#certifications">Certificates</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero section" id="home">
+    <div class="hero-info">
+      <div class="hero-info-title">
+        <i class='bx bxl-sketch'></i>
+        Mechanical Engineer Portfolio
+      </div>
+      <h1>Learning, Building &amp; <span class="gradient">Innovating</span></h1>
+      <p>
+        I am an aspiring engineer with interests in mechanical engineering, programming, and robotics.
+        I focus on learning and building practical, real-world projects.
+      </p>
+      <button class="hero-btn" onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });">
+        <a href="#contact" onclick="event.preventDefault();"><i class='bx bx-send'></i>&nbsp; Contact Me</a>
+      </button>
+    </div>
+    <div class="skills-video-box">
+      <div class="video-border-glow"></div>
+      <video class="skills-video" autoplay loop muted playsinline src="/videos/F1.mp4"></video>
+    </div>
+  </section>
+
+  <div class="main-content">
+
+    <!-- ABOUT -->
+    <section class="info-section section" id="about">
+      <h1 class="section-title"><span class="title-line"></span> Hello, There 👋 <span class="title-line"></span></h1>
+      <div class="info-cards">
+        <div class="card" data-aos="fade-up">
+          <div class="card-tag"></div>
+          <h1>Hi, I am Aryan Nale</h1>
+          <p>I am a first-year Mechanical Engineering student. Interested in Web development, Python &amp; C, CAD, Robotics &amp; Automation.</p>
+          <img src="/img/asn2.jpeg" alt="Aryan Nale">
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-tag"></div>
+          <h1>Why Mechanical Engineering?</h1>
+          <p>It builds strong fundamentals in machines and design. Helps in problem solving and real-world engineering.</p>
+          <video src="/videos/CAR.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-tag"></div>
+          <h1>Why Coding?</h1>
+          <p>Coding helps build websites and real projects. Converts ideas into working solutions.</p>
+          <video src="/videos/programming.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-tag"></div>
+          <h1>Why Robotics?</h1>
+          <p>Robotics combines mechanical + coding. Helps build smart machines and automation systems.</p>
+          <video src="/videos/robot.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section section" id="skills">
+      <h1 class="section-title"><span class="title-line"></span> My Skills 💪 <span class="title-line"></span></h1>
+      <div class="skills-container">
+        <div class="skills-image-box">
+          <img src="/IMG/digital brain (2).png" alt="Digital Brain">
+        </div>
+        <div class="skills-content">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <h2 class="gradient">Designer</h2>
+              <i class='bx bx-laptop'></i>
+            </div>
+            <div class="skill-bar-wrap">
+              <span>HTML/CSS</span><div class="skill-bar"><div class="bar-fill" style="width:85%"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <span>FUSION 360/SOLIDWORK/AUTOCAD</span><div class="skill-bar"><div class="bar-fill" style="width:70%"></div></div>
+            </div>
+            <p>
+            CAD design & 3D modeling using Fusion 360, SolidWorks, and AutoCAD
+            with focus on mechanical design, product development, and modern UI
+            design using HTML & CSS.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <h2 class="gradient">Coder</h2>
+              <i class='bx bx-code-block'></i>
+            </div>
+            <div class="skill-bar-wrap">
+              <span>Python/C/C++</span><div class="skill-bar"><div class="bar-fill" style="width:75%"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <span>ROS 1 & 2/OPENCV/SQL</span><div class="skill-bar"><div class="bar-fill" style="width:65%"></div></div>
+            </div>
+            <p>
+            Robotics development using Python, C++, ROS 1 & 2, OpenCV,sensor integration, automation, and computer vision.
+            </p>
+          </div> 
+        </div>
+      </div>
+      
+      <!-- LANGUAGE SKILLS -->
+      <div class="language-skills-container fadein-left">
+        <div class="lang-box">
+            <div class="lang-info">
+                <span>English</span>
+                <span class="lang-percent">99%</span>
+            </div>
+            <div class="lang-bar-wrap">
+                <div class="lang-bar-fill" data-width="99%"></div>
+            </div>
+        </div>
+        <div class="lang-box">
+            <div class="lang-info">
+                <span>Marathi</span>
+                <span class="lang-percent">99%</span>
+            </div>
+            <div class="lang-bar-wrap">
+                <div class="lang-bar-fill" data-width="99%"></div>
+            </div>
+        </div>
+        <div class="lang-box">
+            <div class="lang-info">
+                <span>Hindi</span>
+                <span class="lang-percent">99%</span>
+            </div>
+            <div class="lang-bar-wrap">
+                <div class="lang-bar-fill" data-width="99%"></div>
+            </div>
+        </div>
+        <div class="lang-box">
+            <div class="lang-info">
+                <span>German</span>
+                <span class="lang-percent">60%</span>
+            </div>
+            <div class="lang-bar-wrap">
+                <div class="lang-bar-fill" data-width="60%"></div>
+            </div>
+        </div>
+      </div>
+
+<div class="tech-slider">
+    <div class="tech-track">
+
+        <!-- ORIGINAL SET -->
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+            <span>HTML5</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+            <span>CSS3</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <span>JavaScript</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <span>Python</span>
+        </div>
+        <div class="tech-icon-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            <span>C</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/cplusplus.svg" style="filter: invert(30%) sepia(80%) saturate(500%) hue-rotate(200deg);" alt="C++">
+            <span>C++</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/opencv.svg"style="filter: invert(40%) sepia(90%) saturate(500%) hue-rotate(200deg);" alt="OpenCV">
+            <span>OpenCV</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Ros_logo.svg" alt="Git">
+            <span>ROS</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg"style="filter: invert(100%);"alt="AI">
+            <span>AI</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tensorflow.svg"style="filter: invert(100%);" alt="ML">
+            <span>ML</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/arduino.svg" style="filter: invert(100%);"alt="Arduino">
+            <span>Arduino</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/autodesk.svg"style="filter: invert(13%) sepia(96%) saturate(6000%) hue-rotate(350deg);" alt="AutoCAD">
+            <span>AUTOCAD</span>
+        </div>
+        <div class="tech-icon-card">  
+            <img src="https://cdn.worldvectorlogo.com/logos/solidworks.svg" alt="SolidWorks">
+            <span>SolidWorks</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+            <span>Git</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="filter: invert(100%);" alt="GitHub">
+            <span>GitHub</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftsqlserver.svg"style="filter: invert(20%) sepia(90%) saturate(500%) hue-rotate(340deg); alt="MicrosoftSQL">
+            <span>MicrosoftSQL</span>
+        </div>
+        <!-- ORIGINAL SET -->
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+            <span>HTML5</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+            <span>CSS3</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <span>JavaScript</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <span>Python</span>
+        </div>
+        <div class="tech-icon-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            <span>C</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/cplusplus.svg" style="filter: invert(30%) sepia(80%) saturate(500%) hue-rotate(200deg);" alt="C++">
+            <span>C++</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/opencv.svg"style="filter: invert(40%) sepia(90%) saturate(500%) hue-rotate(200deg);" alt="OpenCV">
+            <span>OpenCV</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Ros_logo.svg" alt="Git">
+            <span>ROS</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg"style="filter: invert(100%);"alt="AI">
+            <span>AI</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/tensorflow.svg"style="filter: invert(100%);" alt="ML">
+            <span>ML</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/arduino.svg" style="filter: invert(100%);"alt="Arduino">
+            <span>Arduino</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/autodesk.svg"style="filter: invert(13%) sepia(96%) saturate(6000%) hue-rotate(350deg);" alt="AutoCAD">
+            <span>AUTOCAD</span>
+        </div>
+        <div class="tech-icon-card">  
+            <img src="https://cdn.worldvectorlogo.com/logos/solidworks.svg" alt="SolidWorks">
+            <span>SolidWorks</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+            <span>Git</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="filter: invert(100%);" alt="GitHub">
+            <span>GitHub</span>
+        </div>
+        <div class="tech-icon-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftsqlserver.svg"style="filter: invert(20%) sepia(90%) saturate(500%) hue-rotate(340deg); alt="MicrosoftSQL">
+            <span>MicrosoftSQL</span>
+        </div>
+        </div>
+      </div> 
+    </section>
+
+    <section class="resume-section section" id="resume">
+    <h1 class="section-title">My Resume 📄</h1>
+
+    <div class="resume-container">
+        <div class="resume-preview">
+
+            <!-- Corner decorations -->
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+
+            <!-- Scan line animation -->
+            <div class="scanline"></div>
+
+            <!-- Icon -->
+            <span class="resume-icon">📋</span>
+
+            <!-- Name & Title -->
+            <h2 class="resume-title">ARYAN NALE</h2>
+            <p class="resume-subtitle">MECHANICAL ENGINEERING STUDENT &nbsp;|&nbsp; DEVELOPER &nbsp;|&nbsp; ROBOTICS</p>
+
+            <!-- Stats -->
+            <div class="resume-stats">
+                <div class="resume-stat">
+                    <span class="resume-stat-num">1st</span>
+                    <span class="resume-stat-label">YEAR</span>
+                </div>
+                <div class="resume-stat">
+                    <span class="resume-stat-num">5+</span>
+                    <span class="resume-stat-label">PROJECTS</span>
+                </div>
+                <div class="resume-stat">
+                    <span class="resume-stat-num">5+</span>
+                    <span class="resume-stat-label">CERTIFICATES</span>
+                </div>
+                <div class="resume-stat">
+                    <span class="resume-stat-num">2025-2029</span>
+                    <span class="resume-stat-label">BATCH</span>
+                </div>
+            </div>
+
+            <!-- Skill Tags -->
+            <div class="resume-tags">
+                <span class="resume-tag">HTML5</span>
+                <span class="resume-tag">CSS3</span>
+                <span class="resume-tag">JavaScript</span>
+                <span class="resume-tag">Python</span>
+                <span class="resume-tag">MicrosoftSQL</span>
+                <span class="resume-tag">OpenCV</span>
+                <span class="resume-tag">ROS</span>
+                <span class="resume-tag">AUTOCAD</span>
+                <span class="resume-tag">Fusion360</span>
+                <span class="resume-tag">SolidWorks</span>
+                <span class="resume-tag">C / C++</span>
+                <span class="resume-tag">AI / ML</span>
+                <span class="resume-tag">Git / GitHub</span>
+                <span class="resume-tag">Arduino</span>
+            </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="resume-buttons">
+            <a href="YOUR_RESUME.pdf" download="Aryan_Nale_Resume.pdf" class="resume-dl-btn">
+                <i class='bx bx-download'></i>
+                <span>DOWNLOAD RESUME</span>
+            </a>
+            <a href="YOUR_RESUME.pdf" target="_blank" class="resume-view-btn">
+                <i class='bx bx-show'></i>
+                <span>VIEW ONLINE</span>
+            </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- CERTIFICATES -->
+    <section class="certificate-section section" id="certifications">
+      <h1 class="section-title"><span class="title-line"></span> Certificates 📜<span class="title-line"></span></h1>
+      <div class="certificate-slider">
+        <div class="slider-track">
+          <div class="slide"><img src="/img/python.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/sql.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/course.png" alt="cert"></div>
+          <div class="slide"><img src="/img/project.png" alt="cert"></div>
+          <div class="slide"><img src="/img/internship.png" alt="cert"></div>
+          <div class="slide"><img src="/img/participation.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/python.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/sql.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/course.png" alt="cert"></div>
+          <div class="slide"><img src="/img/project.png" alt="cert"></div>
+          <div class="slide"><img src="/img/internship.png" alt="cert"></div>
+          <div class="slide"><img src="/img/participation.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/python.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/sql.jpeg" alt="cert"></div>
+          <div class="slide"><img src="/img/course.png" alt="cert"></div>
+          <div class="slide"><img src="/img/project.png" alt="cert"></div>
+          <div class="slide"><img src="/img/internship.png" alt="cert"></div>
+          <div class="slide"><img src="/img/participation.jpeg" alt="cert"></div>
+
+        </div>
+      </div>
+      <button class="view-btn" id="viewBtn"><i class='bx bx-list-ul'></i>&nbsp; View All Certificates</button>
+      <div class="certificate-list" id="certList">
+        <div class="cert-item">
+          <div class="cert-icon"><i class='bx bxs-award'></i></div>
+          <p>Python Certificate</p>
+          <a href="/pdf/intellipaat- python certificate .pdf" target="_blank"><i class='bx bx-link-external'></i> Open</a>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon"><i class='bx bxs-award'></i></div>
+          <p>Microsoft SQL Certificate</p>
+          <a href="/pdf/intellipaat-microsoft sql (1).pdf"><i class='bx bx-link-external'></i> Open</a>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon"><i class='bx bxs-award'></i></div>
+          <p>Robotics Internship Certificate</p>
+          <a href="/pdf/certificates_EGIC0303.pdf"><i class='bx bx-link-external'></i> Open</a>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon"><i class='bx bxs-award'></i></div>
+          <p>Robotics Project Completion</p>
+          <a href="/pdf/certificates_EGPC1458.pdf"><i class='bx bx-link-external'></i> Open</a>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon"><i class='bx bxs-award'></i></div>
+          <p>Robotics Course Completion</p>
+          <a href="/pdf/certificates_EGCC1589.pdf"><i class='bx bx-link-external'></i> Open</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="my-project section" id="projects">
+      <h1 class="section-title"><span class="title-line"></span> My Projects 👨‍💻 <span class="title-line"></span></h1>
+
+      <div class="project-card">
+        <div class="project-vidbox fadein-right">
+          <div class="project-num">01</div>
+          <video muted loop playsinline src="/videos/rmc.mp4"></video>
+          <div class="project-overlay">View Project</div>
+        </div>
+        <div class="project-info fadein-left">
+          <span class="project-tag">Web Development</span>
+          <h1>College <span class="gradient">RMC Club</span> Website</h1>
+          <p>Modern club website with responsive UI, event showcase and smooth animations.</p>
+          <div class="project-tags-row">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+          <button><i class='bx bx-link-external'></i> Visit Project</button>
+        </div>
+      </div>
+
+      <div class="project-card reverse">
+        <div class="project-vidbox fadein-left">
+          <div class="project-num">02</div>
+          <video muted loop playsinline src="/videos/uiux.mp4"></video>
+          <div class="project-overlay">View Project</div>
+        </div>
+        <div class="project-info fadein-right">
+          <span class="project-tag">UI/UX</span>
+          <h1>Modern <span class="gradient">Portfolio</span></h1>
+          <p>Personal portfolio with matrix theme, animations and responsive design.</p>
+          <div class="project-tags-row">
+            <span>HTML</span><span>CSS</span><span>Canvas</span>
+          </div>
+          <button><i class='bx bx-link-external'></i> Visit Project</button>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-vidbox fadein-right">
+          <div class="project-num">03</div>
+          <video muted loop playsinline src="/videos/adl.mp4"></video>
+          <div class="project-overlay">View Project</div>
+        </div>
+        <div class="project-info fadein-left">
+          <span class="project-tag">IoT ThinkerCAD</span>
+          <h1>AUTOMATED <span class="gradient">DOOR LOCK SYESTEM</span> Car</h1>
+          <p> Developed an automated door lock system using Arduino, keypad,and servo motor for secure password-based access control and smart locking automation.</p>
+          <div class="project-tags-row">
+            <span>ArduinoR3 </span><span>Safety Lock </span><span>C++</span>
+          </div>
+          <button><i class='bx bx-link-external'></i> Visit Project</button>
+        </div>
+
+
+      <div class="project-card reverse">
+        <div class="project-vidbox fadein-left">
+          <div class="project-num">04</div>
+          <video muted loop playsinline src="/videos/aspm.mp4"></video>
+          <div class="project-overlay">View Project</div>
+        </div>
+        <div class="project-info fadein-right">
+          <span class="project-tag">IoT ThinkerCAD</span>
+          <h1>AUTOMATED <span class="gradient">PLANT MONITORING</span></h1>
+          <p>Developed an automatic smart plant monitoring system using Arduino and soil moisture sensors for real-time monitoring and automated watering control.</p><div class="project-tags-row">
+            <span>ArduinoR3 </span><span>Plant Mointoring </span><span>C++</span>
+          </div>
+          <button><i class='bx bx-link-external'></i> Visit Project</button>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-vidbox fadein-right">
+          <div class="project-num">05</div>
+          <video muted loop playsinline src="/videos/rccar.mp4"></video>
+          <div class="project-overlay">View Project</div>
+        </div>
+        <div class="project-info fadein-left">
+          <span class="project-tag">IoT / HARDWARE</span>
+          <h1>RC <span class="gradient">Bluetooth</span> Car</h1>
+          <p>Designed and developed an RC Bluetooth-controlled car using Arduino,motor driver modules, and wireless communication for real-time control and automation.</p>
+          <div class="project-tags-row">
+            <span>ArduinoR3 </span><span>HC-35 </span><span>C++</span>
+          </div>
+          <button><i class='bx bx-link-external'></i> Visit Project</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section section" id="contact">
+      <h1 class="section-title"><span class="title-line"></span> Contact Me 👋 <span class="title-line"></span></h1>
+      <div class="contact-container">
+        <div class="social-box">
+          <div class="contact-label">// GET IN TOUCH</div>
+          <a href="tel:+918177890775">
+            <i class='bx bxs-phone'></i>
+            <span>+91 81778 90775</span>
+          </a>
+          <a href="mailto:aaryannale0612@gmail.com">
+            <i class='bx bxl-gmail'></i>
+            <span>aaryannale0612@gmail.com</span>
+          </a>
+          <div class="divider"></div>
+          <div class="social-icons">
+            <a href="https://wa.me/918177890775" target="_blank" title="WhatsApp">
+              <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="https://www.instagram.com/a.s.n._012" target="_blank" title="Instagram">
+              <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="#" title="GitHub">
+              <i class='bx bxl-github'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aryan-nale-0612asn" target="_blank" title="LinkedIn">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form-box fadein-right">
+          <div class="contact-label">// SEND A MESSAGE</div>
+          <form action="https://formsubmit.co/aaryannale0612@gmail.com" method="POST" class="contact-form">
+            <!-- Spam Protection -->
+            <input type="text" name="_honey" style="display:none">
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Email Template -->
+            <input type="hidden" name="_template" value="box">
+            
+            <div class="form-group">
+              <input type="text" name="name" required placeholder="Your Name" class="form-input">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" required placeholder="Your Email" class="form-input">
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="4" required placeholder="Your Message" class="form-input"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class='bx bx-send'></i>&nbsp; SEND MESSAGE
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 <span class="gradient">Aryan Nale</span> | Mechanical Engineering Student</p>
+      <p class="footer-sub">Built with 💚 and lots of code</p>
+    </footer>
+
+  </div><!-- end main-content -->
+</div><!-- end mainContent -->
+
+<script src="script.js"></script>
+</body>
+</html>
